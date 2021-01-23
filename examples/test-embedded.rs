@@ -9,7 +9,7 @@ use warp::Filter;
 #[folder = "data"]
 struct Data;
 
-#[tokio::main]
+#[tokio::main(flavor = "current_thread")]
 async fn main() {
     let matches = App::new("Embedded test")
         .version(crate_version!())
